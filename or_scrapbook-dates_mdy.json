@@ -214,5 +214,106 @@
     "onError": "keep-original",
     "repeat": false,
     "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Date using expression value.toDate()",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": [
+        {
+          "mode": "regex",
+          "caseSensitive": false,
+          "query": "\\d{4}\\-\\d{4}$",
+          "name": "Date",
+          "type": "text",
+          "columnName": "Date"
+        }
+      ]
+    },
+    "columnName": "Date",
+    "expression": "value.toDate()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column End Date at index 1 based on column Date using expression grel:value.slice(5,9)",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": [
+        {
+          "mode": "regex",
+          "caseSensitive": false,
+          "query": "\\d{4}\\-\\d{4}$",
+          "name": "Date",
+          "type": "text",
+          "columnName": "Date"
+        }
+      ]
+    },
+    "newColumnName": "End Date",
+    "columnInsertIndex": 1,
+    "baseColumnName": "Date",
+    "expression": "grel:value.slice(5,9)",
+    "onError": "keep-original"
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column End Date using expression value.toDate()",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": [
+        {
+          "mode": "regex",
+          "caseSensitive": false,
+          "query": "\\d{4}\\-\\d{4}$",
+          "name": "Date",
+          "type": "text",
+          "columnName": "Date"
+        }
+      ]
+    },
+    "columnName": "End Date",
+    "expression": "value.toDate()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Date using expression grel:value.slice(0,4)",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": [
+        {
+          "mode": "regex",
+          "caseSensitive": false,
+          "query": "\\d{4}\\-\\d{4}$",
+          "name": "Date",
+          "type": "text",
+          "columnName": "Date"
+        }
+      ]
+    },
+    "columnName": "Date",
+    "expression": "grel:value.slice(0,4)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Date using expression value.toDate()",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "Date",
+    "expression": "value.toDate()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
   }
 ]
