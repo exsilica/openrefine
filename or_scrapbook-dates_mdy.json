@@ -1,5 +1,31 @@
 [
   {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Column 2 using expression value.trim()",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "Column 2",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Column 2 using expression value.replace(/\\s+/,' ')",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "Column 2",
+    "expression": "value.replace(/\\s+/,' ')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
     "op": "core/column-addition",
     "description": "Create column Date at index 2 based on column Column 2 using expression grel:value.partition(/(circa)?( [A-Za-z]+)?( \\d+)?(( \\[\\d{4}\\]$)|( \\d{4}$))|(( \\d{4}\\-\\d{4}$))/)[1]",
     "engineConfig": {
