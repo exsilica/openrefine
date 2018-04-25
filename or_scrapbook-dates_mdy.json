@@ -1,0 +1,21 @@
+[
+  {
+    "op": "core/column-addition",
+    "description": "Create column Date at index 2 based on column Column 2 using expression grel:value.partition(/(circa)?( [A-Za-z]+)?( \\d+)?(( \\[\\d{4}\\]$)|( \\d{4}$))|(( \\d{4}\\-\\d{4}$))/)[1]",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "Date",
+    "columnInsertIndex": 2,
+    "baseColumnName": "Column 2",
+    "expression": "grel:value.partition(/(circa)?( [A-Za-z]+)?( \\d+)?(( \\[\\d{4}\\]$)|( \\d{4}$))|(( \\d{4}\\-\\d{4}$))/)[1]",
+    "onError": "keep-original"
+  },
+  {
+    "op": "core/column-move",
+    "description": "Move column Date to position 0",
+    "columnName": "Date",
+    "index": 0
+  }
+]
