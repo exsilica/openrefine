@@ -17,5 +17,176 @@
     "description": "Move column Date to position 0",
     "columnName": "Date",
     "index": 0
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Date using expression value.trim()",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "Date",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Date using expression value.toDate()",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "Date",
+    "expression": "value.toDate()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Date using expression value.toDate()",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": [
+        {
+          "mode": "regex",
+          "caseSensitive": false,
+          "query": "^[A-Za-z]+ \\d{4}",
+          "name": "Date",
+          "type": "text",
+          "columnName": "Date"
+        }
+      ]
+    },
+    "columnName": "Date",
+    "expression": "value.toDate()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Date using expression value.toDate()",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": [
+        {
+          "mode": "regex",
+          "caseSensitive": false,
+          "query": "^[A-Za-z]+ \\d{4}",
+          "name": "Date",
+          "type": "text",
+          "columnName": "Date"
+        }
+      ]
+    },
+    "columnName": "Date",
+    "expression": "value.toDate()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Date using expression grel:value.toDate('MMM yyyy')",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": [
+        {
+          "mode": "regex",
+          "caseSensitive": false,
+          "query": "^[A-Za-z]+ \\d{4}",
+          "name": "Date",
+          "type": "text",
+          "columnName": "Date"
+        }
+      ]
+    },
+    "columnName": "Date",
+    "expression": "grel:value.toDate('MMM yyyy')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Date using expression value.toDate()",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": [
+        {
+          "mode": "regex",
+          "caseSensitive": false,
+          "query": "[A-Za-z]+ \\d+ \\[\\d{4}\\]",
+          "name": "Date",
+          "type": "text",
+          "columnName": "Date"
+        }
+      ]
+    },
+    "columnName": "Date",
+    "expression": "value.toDate()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Date using expression grel:value.toDate('MMM dd [yyyy]')",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": [
+        {
+          "mode": "regex",
+          "caseSensitive": false,
+          "query": "[A-Za-z]+ \\d+ \\[\\d{4}\\]",
+          "name": "Date",
+          "type": "text",
+          "columnName": "Date"
+        }
+      ]
+    },
+    "columnName": "Date",
+    "expression": "grel:value.toDate('MMM dd [yyyy]')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Date using expression grel:value.slice(1,5)",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": [
+        {
+          "mode": "regex",
+          "caseSensitive": false,
+          "query": "\\[\\d{4}\\]",
+          "name": "Date",
+          "type": "text",
+          "columnName": "Date"
+        }
+      ]
+    },
+    "columnName": "Date",
+    "expression": "grel:value.slice(1,5)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Date using expression value.toDate()",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "Date",
+    "expression": "value.toDate()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
   }
 ]
