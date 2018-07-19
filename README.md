@@ -1,2 +1,4 @@
 # openrefine
-JSON for OR data versioning/sharing
+Brute force JSON operations for Digital Lab
+
+Templates for ingest toolkit
